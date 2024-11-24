@@ -8,22 +8,68 @@
 </head>
 <body>
   <!--This sentence is nothing. FlexiblyOS powered by NextChance.org(Noimzip)-->
+  <div id="top-taskbar"></div>
+  <div id="left-taskbar"></div>
+  <div id="right-taskbar"></div>
+  <div id="bottom-taskbar"></div>
   <div id="settings">⚙</div>
+  <span id="flex-tools">FT</span>
+    <div id="tools-container">
+      <div id="newapps">New Apps</div>
+      <div id="applist">Apps List</div>
+      <div id="onetab">One Tab</div>
+      <div id="addonstore">Addon Store</div>
+      <div id="focusmode">Focus Mode</div>
+      <div id="todo">To Do & Calender</div>
+    </div>
   <div id="window">
     <span class="window-close">X</span>
     <span class="window-size">❑</span>
     <span class="window-small">ー</span>
-    <div id="w-c-settings-container"></div> 
+    <div id="w-c-container"></div>
   </div>
 
   <div id="w-c-settings" class="w-c">
-    between - right and left taskbar
-    sandwhich - top and bottom taskbar
-    among - all side taskbar
-    leftop - left and top taskbar
-    leftom - left and bottom taskbar
-    rightop - right and top taskbar
-    rightom - right and bottom taskbar
+    Desktop Settings
+    Flexibly tools <input type="checkbox">
+    
+    Taskbar Settings
+    top - top taskbar<input type="checkbox">
+    left - left taskbar<input type="checkbox">
+    right - right taskbar<input type="checkbox">
+    bottom - bottom taskbar<input type="checkbox">
+  </div>
+
+  <div id="w-c-newapps" class="w-c">
+    追加したいアプリのリンクを入力してください
+    <input id="newapps-link"><button id="newapps-decide">決定</button>
+    <label><img id="newapps-favicon-link" src=""><p id="newapps-name"></p></label>
+  </div>
+
+  <div id="w-c-focus" class="w-c">
+    フォーカスモード
+    <span id="focus-hou">0</span>:<span id="focus-min">0</span>:<span id="focus-sec">0</span>
+    <button id="start" disabled>スタート</button><button id="stops">ストップ</button><button id="reset">リセット</button>
+    <div id="addtime">
+      <button id="focus-1hou">+1時間</button>
+      <button id="focus-10min">+10分</button>
+      <button id="focus-5min">+5分</button>
+      <button id="focus-1min">+1分</button>
+      <button id="focus-10sec">+10秒</button>
+      <button id="focus-1sec">+1秒</button>
+    </div>
+    音を鳴らして終了を通知する<input type="checkbox">
+    Todo または イベントを設定する
+    フォーカスを記録する<input type="checkbox">
+    <div id="focusmusics">
+      <div><a href="https://open.spotify.com/"><img id="spotify" src="img/spotify.png" width="60" height="60">Spotify</a></div>
+      <div><a href="https://music.youtube.com/"><img class="focusmusic" id="youtubemusic" src="img/youtubemusic.png" width="60" height="60">YouTube<br>Music</a></div>
+      <div><a href="https://music.line.me/webapp/today"><img class="focusmusic" id="line-music" src="img/linemusic.png" width="60" height="60">LINE<br>MUSIC</a></div>
+      <div><a href="https://music.apple.com/jp/new"><img class="focusmusic" id="apple-music" src="img/applemusic.png" width="60" height="60">Apple<br>Music</a></div>
+      <div><a href="https://music.amazon.co.jp/"><img class="focusmusic" id="amazon-music" src="img/amazonmusic.png" width="60" height="60">Amazon<br>Music</a></div>
+      <div><a href="https://soundcloud.com/"><img class="focusmusic" id="sound-cloud" src="img/soundcloud.png" width="60" height="60">SoundCloud</a></div>
+      <div><a href="https://awa.fm/"><img class="focusmusic" id="awa" src="img/awa.png" width="60" height="60">AWA</a></div>
+    </div>
   </div>
 <script src="script.js"></script>
 </body>
