@@ -48,7 +48,8 @@
 
   <div id="w-c-focus" class="w-c">
     フォーカスモード
-    <span id="focus-hou">0</span>:<span id="focus-min">0</span>:<span id="focus-sec">0</span>
+    <div id="focus-timer-display">フォーカスタイマー <span id="focus-hou">0</span>:<span id="focus-min">0</span>:<span id="focus-sec">0</span></div>
+    <div id="interval-timer-display">インターバルタイマー <span id="interval-hou">0</span>:<span id="interval-min">0</span>:<span id="interval-sec">0</span></div>
     <button id="start" disabled>スタート</button><button id="stops">ストップ</button><button id="reset">リセット</button>
     <div id="addtime">
       <button id="focus-1hou">+1時間</button>
@@ -57,10 +58,36 @@
       <button id="focus-1min">+1分</button>
       <button id="focus-10sec">+10秒</button>
       <button id="focus-1sec">+1秒</button>
+      <div></div>
+      <button id="focus-1hou-">-1時間</button>
+      <button id="focus-10min-">-10分</button>
+      <button id="focus-5min-">-5分</button>
+      <button id="focus-1min-">-1分</button>
+      <button id="focus-10sec-">-10秒</button>
+      <button id="focus-1sec-">-1秒</button>
     </div>
-    音を鳴らして終了を通知する<input type="checkbox">
+    音を鳴らして終了を通知する<input id="notice-button" type="checkbox">
     Todo または イベントを設定する
-    フォーカスを記録する<input type="checkbox">
+    フォーカスを記録する<input id="focus-record" type="checkbox">
+    インターバルモード(ポモドーロタイマー)<button id="interval-on">ON</button><button id="interval-off" disabled>OFF</button>
+    <div id="addtime-interval">
+      <button id="interval-1hou">+1時間</button>
+      <button id="interval-10min">+10分</button>
+      <button id="interval-5min">+5分</button>
+      <button id="interval-1min">+1分</button>
+      <button id="interval-10sec">+10秒</button>
+      <button id="interval-1sec">+1秒</button>
+      <div></div>
+      <button id="interval-1hou-">-1時間</button>
+      <button id="interval-10min-">-10分</button>
+      <button id="interval-5min-">-5分</button>
+      <button id="interval-1min-">-1分</button>
+      <button id="interval-10sec-">-10秒</button>
+      <button id="interval-1sec-">-1秒</button>
+      繰り返し回数(デフォルトは無限)
+      <button id="interval-1">+1</button>
+      <button id="interval-1-">-1</button>
+    </div>
     <div id="focusmusics">
       <div><a href="https://open.spotify.com/"><img id="spotify" src="img/spotify.png" width="60" height="60">Spotify</a></div>
       <div><a href="https://music.youtube.com/"><img class="focusmusic" id="youtubemusic" src="img/youtubemusic.png" width="60" height="60">YouTube<br>Music</a></div>

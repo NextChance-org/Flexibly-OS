@@ -80,3 +80,10 @@ body {
   color: #fff;
 }
 
+#addtime-interval {
+  display: none;
+}
+
+#interval-timer-display {
+  display: none;
+}
