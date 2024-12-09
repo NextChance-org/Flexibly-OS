@@ -84,6 +84,32 @@ body {
   display: none;
 }
 
+#focus-timer-display {
+  text-align: center;
+}
+
 #interval-timer-display {
+  text-align: center;
   display: none;
+}
+
+.timer-display {
+  font-size: 28px;
+}
+
+.timer-range {
+  width: 700px;
+}
+
+.timer-button {
+    display: inline-block;
+    margin: 0px 10px 10px;
+    width: 75px;
+    height: 50px;
+    border-radius: 40px;
+    background: skyblue;
+    text-align:center;
+    line-height: 50px;
+    font-size: 20px;
+    z-index: 1;
 }

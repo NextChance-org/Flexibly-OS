@@ -37,6 +37,97 @@ intervalhouvalue = 0;
 intervalminvalue = 0;
 intervalsecvalue = 0;
 
+// HTML要素の取得
+const focusHourInput = document.getElementById("focus-hou-range");
+const focusMinuteInput = document.getElementById("focus-min-range");
+const focusSecondInput = document.getElementById("focus-sec-range");
+
+// 値変更時の処理
+function updateFocusValue(type, value) {
+    if (type === "hour") {
+        focushouvalue = value;
+        focushou.textContent = value;
+    } else if (type === "minute") {
+        focusminvalue = value;
+        focusmin.textContent = value;
+    } else if (type === "second") {
+        focussecvalue = value;
+        focussec.textContent = value;
+    }
+        if (focusminvalue > 49) {
+            focus10min.disabled = true;
+        }
+        if (focusminvalue > 54) {
+            focus5min.disabled = true;
+        }
+        if (focusminvalue > 58) {
+            focus1min.disabled = true;
+        }
+        if (focusminvalue >= 10) {
+            focus10minm.disabled = false;
+        }
+        if (focusminvalue >= 5) {
+            focus5minm.disabled = false;
+        }
+        if (focusminvalue >= 1) {
+            focus1minm.disabled = false;
+        }
+        if (focussecvalue > 49) {
+            focus10sec.disabled = true;
+        }
+        if (focussecvalue > 58) {
+            focus1sec.disabled = true;
+        }
+        if (focussecvalue >= 10) {
+            focus10secm.disabled = false;
+        }
+        if (focussecvalue >= 1) {
+            focus1secm.disabled = false;
+        }
+        if (intervalminvalue > 49) {
+            interval10min.disabled = true;
+        }
+        if (intervalminvalue > 54) {
+            interval5min.disabled = true;
+        }
+        if (intervalminvalue > 58) {
+            interval1min.disabled = true;
+        }
+        if (intervalminvalue >= 10) {
+            interval10minm.disabled = false;
+        }
+        if (intervalminvalue >= 5) {
+            interval5minm.disabled = false;
+        }
+        if (intervalminvalue >= 1) {
+            interval1minm.disabled = false;
+        }
+        if (intervalsecvalue > 49) {
+            interval10sec.disabled = true;
+        }
+        if (intervalsecvalue > 58) {
+            interval1sec.disabled = true;
+        }
+        if (intervalsecvalue >= 10) {
+            interval10secm.disabled = false;
+        }
+        if (intervalsecvalue >= 1) {
+            interval1secm.disabled = false;
+        }
+
+    if(focushouvalue == 0 && focusminvalue == 0 && focussecvalue == 0) {
+        start.disabled = true;
+    } else {
+        start.disabled = false;
+    }
+}
+
+// イベントリスナーの設定
+focusHourInput.addEventListener("input", (e) => updateFocusValue("hour", parseInt(e.target.value)));
+focusMinuteInput.addEventListener("input", (e) => updateFocusValue("minute", parseInt(e.target.value)));
+focusSecondInput.addEventListener("input", (e) => updateFocusValue("second", parseInt(e.target.value)));
+
+
 start.addEventListener("click", focusstart);
 function focusstart() {
     focus1sec.disabled = true;

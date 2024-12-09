@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>FlexiblyOS - Under Constract</title>
-</head>
-<body>
-  <!--This sentence is nothing. FlexiblyOS powered by NextChance.org(Noimzip)-->
-  <div id="top-taskbar"></div>
-  <div id="left-taskbar"></div>
-  <div id="right-taskbar"></div>
-  <div id="bottom-taskbar"></div>
-  <div id="settings">⚙</div>
-  <span id="flex-tools">FT</span>
-    <div id="tools-container">
-      <div id="newapps">New Apps</div>
-      <div id="applist">Apps List</div>
-      <div id="onetab">One Tab</div>
-      <div id="addonstore">Addon Store</div>
-      <div id="focusmode">Focus Mode</div>
-      <div id="todo">To Do & Calender</div>
-    </div>
-  <div id="window">
-    <span class="window-close">X</span>
-    <span class="window-size">❑</span>
-    <span class="window-small">ー</span>
-    <div id="w-c-container"></div>
-  </div>
-
-  <div id="w-c-settings" class="w-c">
-    Desktop Settings
-    Flexibly tools <input type="checkbox">
-    
-    Taskbar Settings
-    top - top taskbar<input type="checkbox">
-    left - left taskbar<input type="checkbox">
-    right - right taskbar<input type="checkbox">
-    bottom - bottom taskbar<input type="checkbox">
-  </div>
-
-  <div id="w-c-newapps" class="w-c">
-    追加したいアプリのリンクを入力してください
-    <input id="newapps-link"><button id="newapps-decide">決定</button>
-    <label><img id="newapps-favicon-link" src=""><p id="newapps-name"></p></label>
-  </div>
-
-  <div id="w-c-focus" class="w-c">
-    フォーカスモード
+フォーカスモード
     <div id="focus-timer-display">フォーカスタイマー<div class="timer-display"><span id="focus-hou">0</span>:<span id="focus-min">0</span>:<span id="focus-sec">0</span></div></div>
     <div id="interval-timer-display">インターバルタイマー<div class="timer-display"><span id="interval-hou">0</span>:<span id="interval-min">0</span>:<span id="interval-sec">0</span></div></div>
     <button class="timer-button" id="start" disabled>スタート</button><button class="timer-button" id="stops">ストップ</button><button class="timer-button" id="reset">リセット</button>
@@ -103,8 +54,3 @@
       <div><a href="https://soundcloud.com/"><img class="focusmusic" id="sound-cloud" src="img/soundcloud.png" width="60" height="60">SoundCloud</a></div>
       <div><a href="https://awa.fm/"><img class="focusmusic" id="awa" src="img/awa.png" width="60" height="60">AWA</a></div>
     </div>
-  </div>
-<script src="script.js"></script>
-<script src="timer.js"></script>
-</body>
-</html>
